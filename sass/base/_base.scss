@@ -1,0 +1,19 @@
+/* basic reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* root font-size (to define 1rem) */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: $color-white;
+}
