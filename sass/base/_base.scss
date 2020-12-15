@@ -1,4 +1,4 @@
-/* basic reset */
+// basic reset
 *,
 *::after,
 *::before {
@@ -7,9 +7,9 @@
   box-sizing: inherit;
 }
 
-/* root font-size (to define 1rem) */
+// root font-size (to define 1rem)
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; // 1rem = 10px
 }
 
 body {
