@@ -113,8 +113,14 @@ p {
   /* apply the styles of 0% of the animation before the animation starts*/ }
 
 .nice-video__content {
+  outline: 0.5rem solid #b030b0;
+  outline-offset: .5rem;
   width: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  margin: auto; }
+  .nice-video__content:hover {
+    outline: 0.5rem solid #602080;
+    box-shadow: 0 0 50px #b030b0; }
 
 .header {
   height: 95vh;

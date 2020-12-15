@@ -1,8 +1,15 @@
 .nice-video {
-    
 
     &__content {
+        outline: .5rem solid $color-primary-light;
+        outline-offset: .5rem;
         width: 100%;
         object-fit: cover;
+        margin: auto;
+
+        &:hover {
+            outline: .5rem solid $color-primary-dark;
+            box-shadow: 0 0 50px $color-primary-light; 
+        }
     }
 }
