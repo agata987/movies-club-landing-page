@@ -65,3 +65,10 @@ p {
     margin-bottom: $margin-bottom-small;
   }
 }
+
+#white-text {
+  background-image: none;
+  -webkit-background-clip: none;
+  color: $color-white;
+  font-weight: 400;
+}

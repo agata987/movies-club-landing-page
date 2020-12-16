@@ -1,0 +1,39 @@
+.movie-box {
+  perspective: 150rem; // biggest value less dramatic effect, needed for the movie-box to not look flat
+  -moz-perspective: 150rem;
+  position: relative;
+
+  height: 40rem;
+
+  &__side {
+    height: 100%;
+    width: 100%;
+    transition: all 0.7s ease;
+
+    // the have to stack at each other
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // hide the back side of a movie-box__side so we dont see it
+    backface-visibility: hidden;
+
+    &--front {
+      border: 1px solid $color-primary-light;
+      background-color: indianred;
+    }
+
+    &--back {
+      background-color: $color-white;
+      transform: rotateY(-180deg); // back side is already rotated
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}

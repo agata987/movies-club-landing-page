@@ -61,6 +61,12 @@ p {
   p:not(:last-child) {
     margin-bottom: 3rem; }
 
+#white-text {
+  background-image: none;
+  -webkit-background-clip: none;
+  color: #fff;
+  font-weight: 400; }
+
 .color-overlay {
   position: absolute;
   top: 0;
@@ -122,6 +128,30 @@ p {
     outline: 0.5rem solid #602080;
     box-shadow: 0 0 50px #b030b0; }
 
+.movie-box {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem; }
+  .movie-box__side {
+    height: 100%;
+    width: 100%;
+    transition: all 0.7s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; }
+    .movie-box__side--front {
+      border: 1px solid #b030b0;
+      background-color: indianred; }
+    .movie-box__side--back {
+      background-color: #fff;
+      transform: rotateY(-180deg); }
+  .movie-box:hover .movie-box__side--front {
+    transform: rotateY(180deg); }
+  .movie-box:hover .movie-box__side--back {
+    transform: rotateY(0); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/cinema2.jpg);
@@ -148,25 +178,31 @@ p {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 5rem; }
+      margin-right: 9rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 5rem)/ 2); }
+    width: calc((100% - 9rem)/ 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 5rem)/ 3); }
+    width: calc((100% - 2 * 9rem)/ 3); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 5rem)/ 3) + 5rem); }
+    width: calc(2 * ((100% - 2 * 9rem)/ 3) + 9rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 5rem)/ 4); }
+    width: calc((100% - 3 * 9rem)/ 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 5rem)/ 4) + 5rem); }
+    width: calc(2 * ((100% - 3 * 9rem)/ 4) + 9rem); }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 5rem)/ 4) + 2 * 5rem); }
+    width: calc(3 * ((100% - 3 * 9rem)/ 4) + 2 * 9rem); }
 
 [class^='section-'] {
-  background-color: #e2e2e2; }
-  [class^='section-']:not(:first-child) {
-    padding: 5rem 0; }
+  background-color: #e2e2e2;
+  padding: 20rem 0;
+  margin-top: -50px; }
+  [class^='section-']:first-child {
+    margin-top: -15vh;
+    padding: 15rem 0 20rem 0; }
 
-.section-about {
-  padding: 20rem 0 5rem 0;
-  margin-top: -15vh; }
+.section-movies {
+  background-color: #000;
+  transform: skewY(3deg);
+  padding: 15rem 0; }
+  .section-movies > * {
+    transform: skewY(-3deg); }
