@@ -88,10 +88,10 @@ p {
   opacity: 0.4; }
 
 .utiliy-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .utility-margin-top-small {
-  margin-top: 3rem; }
+  margin-top: 3rem !important; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -242,6 +242,8 @@ table {
   [class^='section-']:first-child {
     margin-top: -15vh;
     padding: 15rem 0 20rem 0; }
+  [class^='section-']:last-child {
+    padding-bottom: 10rem; }
 
 .section-movies {
   background-color: #000;
@@ -252,6 +254,3 @@ table {
 
 .section-sessions {
   padding-top: 15rem; }
-
-.last-section {
-  padding-bottom: 10rem; }
