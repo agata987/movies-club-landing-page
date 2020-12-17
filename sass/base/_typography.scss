@@ -72,3 +72,20 @@ p {
   color: $color-white;
   font-weight: 400;
 }
+
+.movie-box__description {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  letter-spacing: .2rem;
+  font-weight: 600;
+  color: $color-white;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-dark,
+    $color-primary-light
+  );
+  padding: .6rem;
+
+  // to fix padding on line break
+  box-decoration-break: clone;
+}
