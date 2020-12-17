@@ -87,5 +87,6 @@ p {
   padding: .6rem;
 
   // to fix padding on line break
+  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }

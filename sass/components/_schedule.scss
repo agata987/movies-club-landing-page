@@ -1,0 +1,25 @@
+table {
+  margin: 0 auto;
+  font-size: 2rem;
+  text-align: center;
+
+  tr {
+    th {
+      &:not(:first-child) {
+        background-color: $color-black;
+        color: $color-white;
+      }
+
+      padding: $table-vertical-padding $table-horizontal-padding;
+    }
+
+    td {
+      &:first-child {
+        background-color: $color-grey-dark;
+        color: $color-white;
+      }
+      background-color: #ccc;
+      padding: $table-vertical-padding $table-horizontal-padding;
+    }
+  }
+}
